@@ -1,0 +1,8 @@
+import os
+path = 'path of folder'
+list_of_files = []
+for (dirpath, dirnames, filenames) in os.walk(path):
+    for filename in filenames: 
+        if filename.endswith('.csv'):
+            list_of_files.append(os.path.join(dirpath,filename))
+print(list_of_files)
